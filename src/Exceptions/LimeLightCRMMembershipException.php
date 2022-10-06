@@ -1,12 +1,9 @@
 <?php
 
-
 namespace KevinEm\LimeLightCRM\Exceptions;
-
 
 class LimeLightCRMMembershipException extends LimeLightCRMException
 {
-
     public function __construct($code, \Exception $previous = null, array $response = [])
     {
         parent::__construct($this->getExceptionMessage($code), $code, $previous, $response);
