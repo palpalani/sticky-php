@@ -6,6 +6,7 @@
     "guzzlehttp/guzzle": "^7.5"
   },
   "require-dev": {
+    "laravel/pint": "^1.0",
     "phpunit/phpunit": "^9.5",
     "mockery/mockery": "^1.5",
     "fakerphp/faker": "^1.20"
@@ -31,5 +32,10 @@
     "psr-4": {
       "KevinEm\\LimeLightCRM\\Tests\\": "tests/"
     }
-  }
+  },
+  "scripts": {
+      "format": "vendor/bin/pint"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
