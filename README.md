@@ -2,21 +2,20 @@
 
 https://www.limelightcrm.com/
 
-[![Latest Stable Version](https://poser.pugx.org/kevinem/lime-light-crm-php/v/stable?format=flat-square)](https://packagist.org/packages/kevinem/lime-light-php)
-[![License](https://poser.pugx.org/kevinem/lime-light-crm-php/license?format=flat-square)](https://packagist.org/packages/kevinem/lime-light-crm-php)
-[![Build Status](https://travis-ci.org/kevinem/lime-light-crm-php.svg?branch=master)](https://travis-ci.org/kevinem/lime-light-crm-php)
+[![Latest Stable Version](https://poser.pugx.org/palpalani/sticky-php/v/stable?format=flat-square)](https://packagist.org/packages/palpalani/sticky-php)
+[![License](https://poser.pugx.org/palpalani/sticky-php/license?format=flat-square)](https://packagist.org/packages/palpalani/sticky-php)
 
 ## Installation
 
 To install, use composer:
 
 ```
-composer require kevinem/lime-light-crm-php
+composer require palpalani/sticky-php
 ```
 
 ## Documentation
 
-http://help.limelightcrm.com/forums/261931-APIs
+https://developer-prod.sticky.io/?version=latest
 
 ### Example Usage
 
