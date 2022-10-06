@@ -2,7 +2,7 @@
   "name": "palpalani/sticky-php",
   "description": "Sticky Subscription Commerce Platform PHP Client",
   "require": {
-    "php": ">=7.4",
+    "php": "^8.0",
     "guzzlehttp/guzzle": "^7.5"
   },
   "require-dev": {
