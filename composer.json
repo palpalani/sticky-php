@@ -1,6 +1,6 @@
 {
-  "name": "kevinem/lime-light-crm-php",
-  "description": "Lime Light CRM PHP Client",
+  "name": "palpalani/sticky-php",
+  "description": "Sticky Subscription Commerce Platform PHP Client",
   "require": {
     "php": ">=7.4",
     "guzzlehttp/guzzle": "^7.5"
@@ -15,6 +15,11 @@
     {
       "name": "Kevin Em",
       "email": "kevinem@thinkdevise.com"
+    },
+    {
+      "name": "palPalani",
+      "email": "palani.p@gmail.com",
+      "role": "Developer"
     }
   ],
   "autoload": {
