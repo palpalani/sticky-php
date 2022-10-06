@@ -1,8 +1,6 @@
 <?php
 
-
 namespace KevinEm\LimeLightCRM\Tests;
-
 
 use KevinEm\LimeLightCRM\Exceptions\LimeLightCRMMembershipException;
 use KevinEm\LimeLightCRM\LimeLightCRM;
@@ -11,7 +9,6 @@ use Mockery as m;
 
 class MembershipTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var limeLightCRM
      */
@@ -49,7 +46,7 @@ class MembershipTest extends \PHPUnit_Framework_TestCase
         $this->expectException(LimeLightCRMMembershipException::class);
 
         $response = [
-            'response_code' => 200
+            'response_code' => 200,
         ];
 
         $this->membership->checkResponse($response);

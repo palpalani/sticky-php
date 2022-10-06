@@ -1,18 +1,14 @@
 <?php
 
-
 namespace KevinEm\LimeLightCRM;
 
 use KevinEm\LimeLightCRM\Exceptions\LimeLightCRMTransactionException;
 
-
 /**
  * Class Transaction
- * @package KevinEm\LimeLightCRM
  */
 class Transaction
 {
-
     /**
      * @var LimeLightCRM
      */
@@ -20,7 +16,8 @@ class Transaction
 
     /**
      * Transaction constructor.
-     * @param LimeLightCRM $limeLightCRM
+     *
+     * @param  LimeLightCRM  $limeLightCRM
      */
     public function __construct(LimeLightCRM $limeLightCRM)
     {
@@ -32,13 +29,14 @@ class Transaction
      */
     public function getTransactionUrl()
     {
-        return $this->LimeLightCRM->getBaseUrl() . '/admin/transact.php';
+        return $this->LimeLightCRM->getBaseUrl().'/admin/transact.php';
     }
 
     /**
      * NOTE: Account for LimeLight's inconsistent response camel/snake case
      *
-     * @param array $response
+     * @param  array  $response
+     *
      * @throws LimeLightCRMTransactionException
      */
     public function checkResponse(array $response)
@@ -55,7 +53,7 @@ class Transaction
 
         if (isset($responses)) {
             foreach ($responses as $code) {
-                if (!in_array($code, [100])) {
+                if (! in_array($code, [100])) {
                     $exception = new LimeLightCRMTransactionException($code, $exception, $response);
                 }
             }
@@ -67,7 +65,7 @@ class Transaction
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function newOrder(array $data)
@@ -84,7 +82,7 @@ class Transaction
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function newOrderCardOnFile(array $data)
@@ -101,7 +99,7 @@ class Transaction
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function newOrderWithProspect(array $data)
@@ -118,7 +116,7 @@ class Transaction
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function authorizePayment(array $data)
@@ -135,7 +133,7 @@ class Transaction
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function newProspect(array $data)
@@ -152,7 +150,7 @@ class Transaction
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function threeDRedirect(array $data)
