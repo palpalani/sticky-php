@@ -43,5 +43,10 @@
     "format": "vendor/bin/pint"
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  }
 }
