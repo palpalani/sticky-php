@@ -9,7 +9,10 @@
     "laravel/pint": "^1.0",
     "phpunit/phpunit": "^9.5",
     "mockery/mockery": "^1.5",
-    "fakerphp/faker": "^1.20"
+    "fakerphp/faker": "^1.20",
+    "phpstan/extension-installer": "^1.1",
+    "phpstan/phpstan-deprecation-rules": "^1.0",
+    "phpstan/phpstan-phpunit": "^1.0"
   },
   "license": "MIT",
   "authors": [
@@ -34,8 +37,16 @@
     }
   },
   "scripts": {
-      "format": "vendor/bin/pint"
+    "analyse": "vendor/bin/phpstan analyse",
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/pest --coverage",
+    "format": "vendor/bin/pint"
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  }
 }
