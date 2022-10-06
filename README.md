@@ -1,6 +1,6 @@
-# Lime Light CRM PHP Client
+# Sticky Subscription Commerce Platform PHP Client
 
-https://www.limelightcrm.com/
+https://sticky.io/
 
 [![Latest Stable Version](https://poser.pugx.org/palpalani/sticky-php/v/stable?format=flat-square)](https://packagist.org/packages/palpalani/sticky-php)
 [![License](https://poser.pugx.org/palpalani/sticky-php/license?format=flat-square)](https://packagist.org/packages/palpalani/sticky-php)
