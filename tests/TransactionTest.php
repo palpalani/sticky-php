@@ -1,6 +1,5 @@
 <?php
 
-
 namespace KevinEm\LimeLightCRM\Tests;
 
 use KevinEm\LimeLightCRM\Exceptions\LimeLightCRMTransactionException;
@@ -10,7 +9,6 @@ use Mockery as m;
 
 class TransactionTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var LimeLightCRM
      */
@@ -48,7 +46,7 @@ class TransactionTest extends \PHPUnit_Framework_TestCase
         $this->expectException(LimeLightCRMTransactionException::class);
 
         $response = [
-            'responseCode' => 200
+            'responseCode' => 200,
         ];
 
         $this->transaction->checkResponse($response);

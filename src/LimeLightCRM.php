@@ -1,18 +1,14 @@
 <?php
 
-
 namespace KevinEm\LimeLightCRM;
-
 
 use GuzzleHttp\Client;
 
 /**
  * Class LimeLightCRM
- * @package KevinEm\LimeLightCRM
  */
 class LimeLightCRM
 {
-
     /**
      * @var Client
      */
@@ -45,7 +41,8 @@ class LimeLightCRM
 
     /**
      * LimeLightCRM constructor.
-     * @param array $options
+     *
+     * @param  array  $options
      */
     public function __construct(array $options)
     {
@@ -71,7 +68,7 @@ class LimeLightCRM
     }
 
     /**
-     * @param Client $httpClient
+     * @param  Client  $httpClient
      * @return $this
      */
     public function setHttpClient(Client $httpClient)
@@ -92,7 +89,7 @@ class LimeLightCRM
     /**
      * @param $method
      * @param $uri
-     * @param array $options
+     * @param  array  $options
      * @return mixed
      */
     public function getResponse($method, $uri, array $options = [])
@@ -104,13 +101,13 @@ class LimeLightCRM
 
     /**
      * @param $method
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function buildFormParams($method, array $data = [])
     {
         return [
-            'form_params' => array_merge_recursive($this->getDefaultFormParams(), compact('method'), $data)
+            'form_params' => array_merge_recursive($this->getDefaultFormParams(), compact('method'), $data),
         ];
     }
 
@@ -121,7 +118,7 @@ class LimeLightCRM
     {
         return [
             'username' => $this->username,
-            'password' => $this->password
+            'password' => $this->password,
         ];
     }
 

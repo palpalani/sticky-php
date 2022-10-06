@@ -1,18 +1,14 @@
 <?php
 
-
 namespace KevinEm\LimeLightCRM;
-
 
 use KevinEm\LimeLightCRM\Exceptions\LimeLightCRMMembershipException;
 
 /**
  * Class Membership
- * @package KevinEm\LimeLightCRM
  */
 class Membership
 {
-
     /**
      * @var LimeLightCRM
      */
@@ -20,7 +16,8 @@ class Membership
 
     /**
      * Membership constructor.
-     * @param LimeLightCRM $limeLightCRM
+     *
+     * @param  LimeLightCRM  $limeLightCRM
      */
     public function __construct(LimeLightCRM $limeLightCRM)
     {
@@ -32,11 +29,12 @@ class Membership
      */
     public function getMembershipUrl()
     {
-        return $this->LimeLightCRM->getBaseUrl() . '/admin/membership.php';
+        return $this->LimeLightCRM->getBaseUrl().'/admin/membership.php';
     }
 
     /**
-     * @param array $response
+     * @param  array  $response
+     *
      * @throws LimeLightCRMMembershipException
      */
     public function checkResponse(array $response)
@@ -47,7 +45,7 @@ class Membership
             $responses = explode(',', $response['response_code']);
 
             foreach ($responses as $code) {
-                if (!in_array($code, [100, 343])) {
+                if (! in_array($code, [100, 343])) {
                     $exception = new LimeLightCRMMembershipException($code, $exception, $response);
                 }
             }
@@ -87,7 +85,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function viewCampaign(array $data)
@@ -104,7 +102,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function findCustomerActiveProduct(array $data)
@@ -121,7 +119,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function calculateRefund(array $data)
@@ -138,7 +136,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function findOverdueOrders(array $data)
@@ -155,7 +153,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function refundOrder(array $data)
@@ -172,7 +170,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function voidOrder(array $data)
@@ -189,7 +187,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function forceOrderBill(array $data)
@@ -206,7 +204,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function updateRecurringOrder(array $data)
@@ -223,7 +221,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function findOrder(array $data)
@@ -240,7 +238,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function findUpdatedOrder(array $data)
@@ -257,7 +255,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function updateOrder(array $data)
@@ -274,7 +272,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function updateSubscription(array $data)
@@ -291,7 +289,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function viewOrder(array $data)
@@ -308,7 +306,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function indexProduct(array $data)
@@ -325,7 +323,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function indexProductAttribute(array $data)
@@ -342,7 +340,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function copyProduct(array $data)
@@ -359,7 +357,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function updateProduct(array $data)
@@ -376,7 +374,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function createProduct(array $data)
@@ -393,7 +391,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function deleteProduct(array $data)
@@ -410,7 +408,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function stopRecurringUpsell(array $data)
@@ -427,7 +425,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function viewProspect(array $data)
@@ -444,7 +442,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function updateProspect(array $data)
@@ -461,7 +459,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function findProspect(array $data)
@@ -478,7 +476,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function viewCustomer(array $data)
@@ -495,7 +493,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function findCustomer(array $data)
@@ -512,7 +510,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function reprocessOrder(array $data)
@@ -529,7 +527,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function getAlternativeProvider(array $data)
@@ -546,7 +544,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function repostToFulfillment(array $data)
@@ -563,7 +561,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function viewShippingMethod(array $data)
@@ -580,7 +578,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function findShippingMethod(array $data)
@@ -597,7 +595,7 @@ class Membership
     }
 
     /**
-     * @param array $data
+     * @param  array  $data
      * @return array
      */
     public function validateCoupon(array $data)

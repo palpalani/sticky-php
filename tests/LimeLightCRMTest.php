@@ -1,8 +1,6 @@
 <?php
 
-
 namespace KevinEm\LimeLightCRM\Tests;
-
 
 use GuzzleHttp\Client;
 use KevinEm\LimeLightCRM\LimeLightCRM;
@@ -13,7 +11,6 @@ use Psr\Http\Message\StreamInterface;
 
 class LimeLightCRMTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @var LimeLightCRM
      */
@@ -43,7 +40,7 @@ class LimeLightCRMTest extends \PHPUnit_Framework_TestCase
         $this->limeLightCRM = new LimeLightCRM([
             'base_url' => 'mock_base_url',
             'username' => 'mock_username',
-            'password' => 'mock_password'
+            'password' => 'mock_password',
         ]);
 
         $this->limeLightCRM->setHttpClient($this->clientMock);
@@ -79,21 +76,21 @@ class LimeLightCRMTest extends \PHPUnit_Framework_TestCase
     {
         $expected = [
             'form_params' => [
-                'username'    => 'mock_username',
-                'password'    => 'mock_password',
-                'method'      => 'mock_method',
+                'username' => 'mock_username',
+                'password' => 'mock_password',
+                'method' => 'mock_method',
                 'mock_field1' => 'mock_value1',
                 'mock_field2' => [
-                    'mock_sub_field1' => 'mock_value2'
-                ]
-            ]
+                    'mock_sub_field1' => 'mock_value2',
+                ],
+            ],
         ];
 
         $data = [
             'mock_field1' => 'mock_value1',
             'mock_field2' => [
-                'mock_sub_field1' => 'mock_value2'
-            ]
+                'mock_sub_field1' => 'mock_value2',
+            ],
         ];
 
         $this->assertEquals($expected, $this->limeLightCRM->buildFormParams('mock_method', $data));
@@ -103,7 +100,7 @@ class LimeLightCRMTest extends \PHPUnit_Framework_TestCase
     {
         $expected = [
             'username' => 'mock_username',
-            'password' => 'mock_password'
+            'password' => 'mock_password',
         ];
 
         $this->assertEquals($expected, $this->limeLightCRM->getDefaultFormParams());
@@ -117,7 +114,7 @@ class LimeLightCRMTest extends \PHPUnit_Framework_TestCase
 
         $expected = [
             'mock1' => 'mock2',
-            'mock3' => 'mock4'
+            'mock3' => 'mock4',
         ];
 
         $this->assertEquals($res, $expected);
@@ -127,7 +124,7 @@ class LimeLightCRMTest extends \PHPUnit_Framework_TestCase
         $res = $this->limeLightCRM->parseResponse($response);
 
         $expected = [
-            'mock1' => 'mock2'
+            'mock1' => 'mock2',
         ];
 
         $this->assertEquals($res, $expected);
@@ -137,7 +134,7 @@ class LimeLightCRMTest extends \PHPUnit_Framework_TestCase
         $res = $this->limeLightCRM->parseResponse($response);
 
         $expected = [
-            'mock1'
+            'mock1',
         ];
 
         $this->assertEquals($res, $expected);
