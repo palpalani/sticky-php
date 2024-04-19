@@ -41,8 +41,6 @@ class LimeLightCRM
 
     /**
      * LimeLightCRM constructor.
-     *
-     * @param  array  $options
      */
     public function __construct(array $options)
     {
@@ -68,7 +66,6 @@ class LimeLightCRM
     }
 
     /**
-     * @param  Client  $httpClient
      * @return $this
      */
     public function setHttpClient(Client $httpClient)
@@ -87,9 +84,6 @@ class LimeLightCRM
     }
 
     /**
-     * @param $method
-     * @param $uri
-     * @param  array  $options
      * @return mixed
      */
     public function getResponse($method, $uri, array $options = [])
@@ -100,8 +94,6 @@ class LimeLightCRM
     }
 
     /**
-     * @param $method
-     * @param  array  $data
      * @return array
      */
     public function buildFormParams($method, array $data = [])
@@ -125,7 +117,6 @@ class LimeLightCRM
     /**
      * Parse response returned by LimeLightCRM into an array
      *
-     * @param $response
      * @return array
      */
     public function parseResponse($response)

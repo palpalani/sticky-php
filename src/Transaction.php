@@ -16,8 +16,6 @@ class Transaction
 
     /**
      * Transaction constructor.
-     *
-     * @param  LimeLightCRM  $limeLightCRM
      */
     public function __construct(LimeLightCRM $limeLightCRM)
     {
@@ -35,7 +33,6 @@ class Transaction
     /**
      * NOTE: Account for LimeLight's inconsistent response camel/snake case
      *
-     * @param  array  $response
      *
      * @throws LimeLightCRMTransactionException
      */
@@ -65,7 +62,6 @@ class Transaction
     }
 
     /**
-     * @param  array  $data
      * @return array
      */
     public function newOrder(array $data)
@@ -82,7 +78,6 @@ class Transaction
     }
 
     /**
-     * @param  array  $data
      * @return array
      */
     public function newOrderCardOnFile(array $data)
@@ -99,7 +94,6 @@ class Transaction
     }
 
     /**
-     * @param  array  $data
      * @return array
      */
     public function newOrderWithProspect(array $data)
@@ -116,7 +110,6 @@ class Transaction
     }
 
     /**
-     * @param  array  $data
      * @return array
      */
     public function authorizePayment(array $data)
@@ -133,7 +126,6 @@ class Transaction
     }
 
     /**
-     * @param  array  $data
      * @return array
      */
     public function newProspect(array $data)
@@ -150,7 +142,6 @@ class Transaction
     }
 
     /**
-     * @param  array  $data
      * @return array
      */
     public function threeDRedirect(array $data)

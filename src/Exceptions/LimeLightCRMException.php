@@ -14,10 +14,8 @@ abstract class LimeLightCRMException extends \Exception
      *
      * @param  string  $message
      * @param  string  $code
-     * @param  \Exception  $previous
-     * @param  array  $response
      */
-    public function __construct($message, $code, \Exception $previous = null, array $response = [])
+    public function __construct($message, $code, ?\Exception $previous = null, array $response = [])
     {
         parent::__construct($message, $code, $previous);
         $this->response = $response;
