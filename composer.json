@@ -2,12 +2,12 @@
   "name": "palpalani/sticky-php",
   "description": "Sticky Subscription Commerce Platform PHP Client",
   "require": {
-    "php": "^8.0",
+    "php": "^8.2",
     "guzzlehttp/guzzle": "^7.5"
   },
   "require-dev": {
     "laravel/pint": "^1.0",
-    "phpunit/phpunit": "^9.5|^10.0",
+    "phpunit/phpunit": "^9.5|^10.0|^11.0",
     "mockery/mockery": "^1.5",
     "fakerphp/faker": "^1.20",
     "phpstan/extension-installer": "^1.1",
