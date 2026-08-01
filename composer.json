@@ -3,7 +3,7 @@
   "description": "Sticky Subscription Commerce Platform PHP Client",
   "require": {
     "php": "^8.2",
-    "guzzlehttp/guzzle": "^7.5"
+    "guzzlehttp/guzzle": "^8.0"
   },
   "require-dev": {
     "laravel/pint": "^1.0",
